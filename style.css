@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+}
+
+h1 {
+    color: #333;
+}
+
+/* Status display styling */
+#status {
+    margin: 20px 0;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #555;
+}
+
+/* The Game Board Container */
+#game-board {
+    display: grid;
+    /* Create a 3x3 grid layout */
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    border: 3px solid #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Individual Cell Styling */
+.cell {
+    border: 1px solid #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* Remove border on specific cells for a cleaner look */
+/* Top row */
+#game-board :nth-child(1), #game-board :nth-child(2), #game-board :nth-child(3) { border-top: none; }
+/* Left column */
+#game-board :nth-child(1), #game-board :nth-child(4), #game-board :nth-child(7) { border-left: none; }
+/* Right column */
+#game-board :nth-child(3), #game-board :nth-child(6), #game-board :nth-child(9) { border-right: none; }
+/* Bottom row */
+#game-board :nth-child(7), #game-board :nth-child(8), #game-board :nth-child(9) { border-bottom: none; }
+
+/* Restart Button */
+#restart-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#restart-button:hover {
+    background-color: #45a049;
+}
